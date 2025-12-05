@@ -63,7 +63,7 @@ Retrieves the metadata for a stored file.
 
 **Example (cURL):**
 ```bash
-curl https://your-app-url.up.railway.app/api/v1/files/file_abc123... \
+curl https://prodigov3-production.up.railway.app/api/v1/files/file_abc123... \
   -H "Authorization: Bearer prod_secret_key_12345"
 ```
 
@@ -76,19 +76,7 @@ Permanently deletes the file and its metadata.
 
 **Example (cURL):**
 ```bash
-curl -X DELETE https://your-app-url.up.railway.app/api/v1/files/file_abc123... \
+curl -X DELETE https://prodigov3-production.up.railway.app/api/v1/files/file_abc123... \
   -H "Authorization: Bearer prod_secret_key_12345"
 ```
 
-## 3. Local Development
-
-1.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-2.  **Run locally**:
-    ```bash
-    API_AUTH_KEY=test-secret npm run dev
-    ```
-3.  **Verify**:
-    The server runs on `http://localhost:3000`.
