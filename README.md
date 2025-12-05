@@ -37,7 +37,7 @@ Uploads a file to the storage volume.
 
 **Example (cURL):**
 ```bash
-curl -X POST https://your-app-url.up.railway.app/api/v1/files \
+curl -X POST https://prodigov3-production.up.railway.app/api/v1/files \
   -H "Authorization: Bearer prod_secret_key_12345" \
   -F "file=@./result.json" \
   -F "customer_id=cus_123" \
