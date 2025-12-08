@@ -10,6 +10,18 @@ The API uses **Bearer Token Authentication**.
 You must set the `API_AUTH_KEY` environment variable on your Railway service to a secret string of your choice.
 - **Example**: `API_AUTH_KEY=prod_secret_key_12345`
 
+### Railway Volume Setup
+**Yes, you must create a volume.** This is where the uploaded files will be stored.
+
+1.  Open your project in **Railway**.
+2.  Click on the **prodigov3** service.
+3.  Go to the **Volumes** tab.
+4.  Click **Add Volume** (or "New Volume").
+5.  Set the **Mount Path** to: `/data/uploads`
+6.  Click **Add**.
+
+*Note: Railway will redeploy your service to attach the volume.*
+
 ### Client Usage
 All requests must include the `Authorization` header with the secret key you defined.
 

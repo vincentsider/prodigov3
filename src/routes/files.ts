@@ -65,6 +65,17 @@ router.post('/', authenticate, upload.single('file'), async (req: Request, res: 
         // Save metadata to disk
         await fs.writeJson(path.join(METADATA_DIR, `${fileId}.json`), fileMetadata);
 
+        // Log upload details
+        console.log('File uploaded:', {
+            id: fileId,
+            filename: req.file.originalname,
+            location: req.file.path,
+            size_bytes: req.file.size,
+            content_type: req.file.mimetype,
+            customer_id: customer_id || null,
+            timestamp: fileMetadata.created_at
+        });
+
         res.status(201).json(fileMetadata);
     } catch (error) {
         console.error('Upload error:', error);
